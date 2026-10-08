@@ -79,8 +79,8 @@ modstitch {
       getDepOrNull("fabric-language-kotlin")?.let { ">=$it" } ?: "*"
     )
 
-    replacementProperties.put("mod_sources", "https://github.com/skulldogged/drop-confirm")
-    replacementProperties.put("mod_issue_tracker", "https://github.com/skulldogged/drop-confirm/issues")
+    replacementProperties.put("mod_sources", "https://github.com/bitflippr/drop-confirm")
+    replacementProperties.put("mod_issue_tracker", "https://github.com/bitflippr/drop-confirm/issues")
     replacementProperties.put("pack_format", getDep("pack_format"))
     replacementProperties.put("neoforge_icon_property", if (sc.current.parsed >= "26.3") "iconFile" else "logoFile")
   }
@@ -301,7 +301,7 @@ publishMods {
 
   github("github") {
     accessToken.set(envVars["GITHUB_TOKEN"])
-    repository.set("skulldogged/drop-confirm")
+    repository.set("bitflippr/drop-confirm")
     commitish.set("master")
     tagName.set("v${modstitch.metadata.modVersion.get()}-$minecraft-$loader")
   }
